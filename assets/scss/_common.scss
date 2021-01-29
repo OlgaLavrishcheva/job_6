@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size;
+    font-family: $font-main;
+    letter-spacing: 0.1em;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    color: $color-light;
+}
+
+h1 {
+    font-family: $font-header;
+    font-weight: 300;
+    font-size: 3.75rem;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+
+    @include lg-min {
+        font-size: 3.75rem;
+    }
+
+    @include lg-md {
+        font-size: 2.5rem;
+    }
+
+    @include md {
+        font-size: 1.875rem;
+    }
+}
+
+h2 {
+    font-family: $font-header;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+
+    @include lg-min {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    @include lg-md {
+        font-size: 2rem;
+    }
+
+    @include md {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+h3 {
+    font-family: $font-main;
+    letter-spacing: 0.1em;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $color-gray;
+}
+
+.btn {
+    border: 2px solid $color-light;
+    background-color: rgba($color-gray-light, 0.1);
+
+    @extend %btn-common;
+
+    @include lg-min {
+        height: 60px;
+        padding: 18px $gap;
+        font-size: 1.125rem;
+        min-width: 250px;
+    }
+
+    @include lg-md {
+        height: 50px;
+        padding: 14px $gap;
+        font-size: 1rem;
+        min-width: 200px;
+    }
+
+    @include md {
+        height: 40px;
+        padding: 9px $gap;
+        min-width: 170px;
+    }
+}
+
+.btn-accent {
+    height: 60px;
+    padding: 18px $gap;
+    border: 2px solid $color-primary;
+    font-size: 1.125rem;
+    background-color: rgba($color-primary, 0.8);
+
+    @extend %btn-common;
+
+    @include sm-min {
+        min-width: 350px;
+    }
+
+    @include sm {
+        width: 100%;
+        min-width: 100%;
+    }
+}

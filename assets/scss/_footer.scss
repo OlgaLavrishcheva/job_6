@@ -1,0 +1,86 @@
+.footer {
+    display: block;
+    width: 100%;
+    height: 252px;
+    background-color: $color-primary;
+
+    @extend %container;
+}
+
+.footer__container {
+    position: relative;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "f1" "f2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px 125px;
+    grid-gap: 0;
+}
+
+.footer__icon {
+    grid-area: f1;
+    display: grid;
+    position: relative;
+    justify-content: center;
+    padding: 60px;
+    grid-template-areas: "fi1 fi2 fi3 fi4 fi5";
+    grid-template-columns: repeat(5, 32.27px);
+    grid-template-rows: 36px;
+    grid-gap: 19.2px;
+    left: 1px;
+
+    & a {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+
+    & a:hover {
+        color: $color-accent;
+    }
+
+    &::after {
+        position: absolute;
+        width: 75px;
+        height: 2px;
+        content: "";
+        background-color: #424b63;
+        left: calc(50% - 75px / 2);
+        bottom: -1px;
+    }
+}
+
+.fab {
+    display: inline-block;
+    font-size: 36px;
+}
+
+.footer__text {
+    grid-area: f2;
+    display: flex;
+    color: $color-gray;
+    justify-content: center;
+
+    & span:nth-child(1) {
+        font-weight: 100;
+        position: absolute;
+        margin-top: 21px;
+        margin-left: 0.5em;
+        letter-spacing: 0.33em;
+    }
+
+    & span:nth-child(2) {
+        font-weight: 600;
+        position: absolute;
+        margin-top: 39px;
+        color: $color-light;
+        letter-spacing: 0.05em;
+    }
+}
+
+@for $i from 1 through 5 {
+    .fab:nth-of-type(#{$i}) {
+        grid-area: fi#{$i};
+    }
+}

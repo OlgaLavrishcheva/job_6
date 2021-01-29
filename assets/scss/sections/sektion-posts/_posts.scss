@@ -1,0 +1,46 @@
+.posts {
+    padding: 100px 20px 100px 20px;
+
+    &__container {
+        max-width: $ul;
+        margin-left: auto;
+        margin-right: auto;
+        color: $color-primary;
+
+        &-name {
+            margin-top: 0;
+            // margin-bottom: 56px;
+            margin-bottom: 57px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-gap: $gap;
+        margin-bottom: $gap;
+        
+        @include lg-min {
+            grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 538px 538px;
+        }
+
+        @include lg-md {
+            grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 538px 538px 538px;
+        }
+
+        @include md-sm {
+            grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 538px 538px;
+        }
+
+        @include sm {
+            grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+            grid-template-columns: 1fr;
+            grid-template-rows: 538px;
+        }
+    }
+}

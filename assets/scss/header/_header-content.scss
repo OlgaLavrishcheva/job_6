@@ -1,0 +1,44 @@
+.header-content {
+    position: relative;
+    /* background-color: darkcyan; */
+
+    &__container {
+        @extend %container;
+    }
+
+    &__title {
+        text-align: center;
+
+        @include lg-min {
+            margin: 0 0 53px;
+        }
+
+        @include lg-md {
+            margin: 0 0 43px;
+        }
+
+        @include md {
+            margin: 0 0 33px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        .btn:first-of-type {
+            @include sm-min {
+                margin-right: $gap;
+            }
+
+            @include sm {
+                margin-bottom: $gap;
+            }
+        }
+
+        @include sm {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

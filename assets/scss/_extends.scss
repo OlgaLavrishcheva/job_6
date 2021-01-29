@@ -1,0 +1,19 @@
+%container {
+    padding-left: $gap;
+    padding-right: $gap;
+    max-width: $ul;
+    margin: auto;
+}
+
+%btn-common {
+    display: block;
+    transition: background-color 0.5s;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+
+    &:hover,
+    &:active {
+        background-color: $color-accent;
+    }
+}

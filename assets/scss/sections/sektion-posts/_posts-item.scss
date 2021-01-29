@@ -1,0 +1,91 @@
+.posts-item {
+    display: block;
+    position: relative;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: darken(#f2f2f2, 10%);
+    }
+
+    &:hover .posts-item__text {
+        color: darken($color-gray, 20%);
+    }
+
+    &:hover .posts-item__text h3 {
+        color: darken($color-gray, 20%);
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    &__linc {
+        display: grid;
+        overflow: hidden;
+        height: 100%;
+        grid-template-rows: 300px 1fr;
+    }
+
+    &__image {
+        display: flex;
+        overflow: hidden;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__image img {
+        width: 100%;
+        transition: transform 0.5s;
+        object-fit: cover;
+    }
+
+    &__text {
+        display: grid;
+        align-content: center;
+        padding: 20px;
+        color: $color-gray;
+        transition: color 0.5s;
+    }
+
+    &__text h3 {
+        font-family: $font-header;
+        letter-spacing: 0.05em;
+        transition: color 0.5s;
+    }
+
+    &__text p {
+        font-family: $font-main;
+        letter-spacing: 0;
+    }
+}
+
+.posts-button {
+    display: flex;
+    justify-content: center;
+}
+
+@for $i from 1 through 6 {
+    .posts-item:nth-of-type(#{$i}) {
+        grid-area: p#{$i};
+    }
+}
+
+
+// @include lg-min {
+    
+//   }
+
+//   @include lg-md {
+    
+//   }
+
+//   @include md-sm {
+    
+//   }
+
+//   @include sm {
+    
+//   }
