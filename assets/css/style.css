@@ -463,7 +463,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.header-menu__container, .header-content__container, .form-container, .footer {
+.header-menu__container, .header-content__container, .form-container {
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1340px;
@@ -848,8 +848,7 @@ header {
   padding-right: 20px;
   min-height: 700px;
   background-color: #e5e5e5;
-  grid-template-columns: 935 auto;
-  grid-column: 100px;
+  grid-template-columns: 935px auto;
 }
 
 .about-container {
@@ -931,39 +930,57 @@ header {
   background-color: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
   -webkit-transition: border-color 0.5s, background-color 0.5s, border-bottom-color 0.5s;
   -o-transition: border-color 0.5s, background-color 0.5s, border-bottom-color 0.5s;
   transition: border-color 0.5s, background-color 0.5s, border-bottom-color 0.5s;
 }
 
-.form-item__input .placeholder {
-  color: #9da1ae;
+.form-item__input:hover, .form-item__input:active, .form-item__input:focus {
+  border: 2px solid #6a7084;
+  background-color: #4c546b;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
 }
 
-.form-item__input:hover, .form-item__input:active, .form-item__input:focus {
-  border-color: 2px solid rgba(255, 255, 255, 0.384);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.8);
+.form-item__input::-webkit-input-placeholder {
+  color: #6a7084;
+}
+
+.form-item__input::-moz-placeholder {
+  color: #6a7084;
+}
+
+.form-item__input:-ms-input-placeholder {
+  color: #6a7084;
+}
+
+.form-item__input::-ms-input-placeholder {
+  color: #6a7084;
+}
+
+.form-item__input::placeholder {
+  color: #6a7084;
 }
 
 .form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #878da0;
 }
 
 .form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
-  color: #ffffff;
+  color: #878da0;
 }
 
 .form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
-  color: #ffffff;
+  color: #878da0;
 }
 
 .form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
-  color: #ffffff;
+  color: #878da0;
 }
 
 .form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
-  color: #ffffff;
+  color: #878da0;
 }
 
 .form-item__btn {
@@ -984,7 +1001,9 @@ header {
 }
 
 .posts {
-  padding: 100px 20px 100px 20px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .posts__container {
@@ -996,7 +1015,6 @@ header {
 
 .posts__container-name {
   margin-top: 0;
-  margin-bottom: 57px;
 }
 
 .posts__grid {
@@ -1034,7 +1052,7 @@ header {
           transform: scale(1.1);
 }
 
-.posts-item__linc {
+.posts-item__link {
   display: grid;
   overflow: hidden;
   height: 100%;
@@ -1152,7 +1170,6 @@ header {
   grid-template-columns: repeat(5, 32.27px);
   grid-template-rows: 36px;
   grid-gap: 19.2px;
-  left: 1px;
 }
 
 .footer__icon a {
@@ -1313,10 +1330,15 @@ header {
   .about__image {
     padding-top: 13px;
   }
+  .posts {
+    padding-top: 100px;
+  }
+  .posts__container-name {
+    margin-bottom: 57px;
+  }
   .posts__grid {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 538px 538px;
   }
 }
 
@@ -1359,6 +1381,13 @@ header {
   .about__image {
     padding-top: 0px;
     padding-bottom: 2px;
+  }
+  .posts {
+    padding-top: 75px;
+  }
+  .posts__container-name {
+    margin-top: 13px;
+    margin-bottom: 45px;
   }
   .posts__grid {
     grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
@@ -1426,6 +1455,13 @@ header {
     grid-template-areas: "a a" "b c";
     grid-template-columns: 1fr 1fr;
   }
+  .posts {
+    padding-top: 51px;
+  }
+  .posts__container-name {
+    margin-top: 0px;
+    margin-bottom: 29px;
+  }
   .posts__grid {
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     grid-template-columns: repeat(2, 1fr);
@@ -1480,6 +1516,13 @@ header {
   .form-container {
     grid-template-areas: "a" "b" "c";
     grid-template-columns: 1fr;
+  }
+  .posts {
+    padding-top: 49px;
+  }
+  .posts__container-name {
+    text-align: center;
+    margin-bottom: 32px;
   }
   .posts__grid {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";

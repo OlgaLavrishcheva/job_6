@@ -1,5 +1,25 @@
 .posts {
-    padding: 100px 20px 100px 20px;
+    // padding: 100px 20px 100px 20px;
+
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include lg-min {
+        padding-top: 100px;
+    }
+
+    @include lg-md {
+        padding-top: 75px;
+    }
+
+    @include md-sm {
+        padding-top: 51px;
+    }
+
+    @include sm {
+        padding-top: 49px;
+    }
 
     &__container {
         max-width: $ul;
@@ -9,8 +29,25 @@
 
         &-name {
             margin-top: 0;
-            // margin-bottom: 56px;
-            margin-bottom: 57px;
+
+            @include lg-min {
+                margin-bottom: 57px;
+            }
+
+            @include lg-md {
+                margin-top: 13px;
+                margin-bottom: 45px;
+            }
+
+            @include md-sm {
+                margin-top: 0px;
+                margin-bottom: 29px;
+            }
+
+            @include sm {
+                text-align: center;
+                margin-bottom: 32px;
+            }
         }
     }
 
@@ -18,11 +55,11 @@
         display: grid;
         grid-gap: $gap;
         margin-bottom: $gap;
-        
+
         @include lg-min {
             grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 538px 538px;
+            // grid-template-rows: 538px 538px;
         }
 
         @include lg-md {

@@ -11,7 +11,6 @@
 
         @extend %container;
 
-        
         @include md-min {
             grid-template-areas: "a b c";
         }
@@ -21,10 +20,10 @@
             grid-template-columns: 1fr 1fr;
         }
 
-            @include sm {
-                grid-template-areas: "a" "b" "c";
+        @include sm {
+            grid-template-areas: "a" "b" "c";
             grid-template-columns: 1fr;
-            }
+        }
     }
 
     &-item {
@@ -52,24 +51,25 @@
             background-color: rgba(255, 255, 255, 0.05);
             border: 2px solid rgba(255, 255, 255, 0);
             border-bottom-color: rgba(255, 255, 255, 0.5);
+            color: $color-light;
             transition: border-color 0.5s, background-color 0.5s, border-bottom-color 0.5s;
-
-            .placeholder {
-                color: #9da1ae;
-            }
 
             &:hover,
             &:active,
             &:focus {
-                border-color: 2px solid rgba(255, 255, 255, 0.384);
-                background-color: rgba(255, 255, 255, 0.1);
-                border-bottom-color: rgba(255, 255, 255, 0.8);
-                // transition: all 0.5s;
+                border: 2px solid #6a7084;
+                background-color: #4c546b;
+                border-bottom: 2px solid $color-light;
+                outline: none;
+            }
+
+            &::placeholder {
+                color: #6a7084;
             }
 
             &:hover::placeholder,
             &:focus::placeholder {
-                color: $color-light;
+                color: #878da0;
             }
         }
 

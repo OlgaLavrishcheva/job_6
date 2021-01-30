@@ -22,7 +22,7 @@
         transform: scale(1.1);
     }
 
-    &__linc {
+    &__link {
         display: grid;
         overflow: hidden;
         height: 100%;
@@ -72,20 +72,3 @@
         grid-area: p#{$i};
     }
 }
-
-
-// @include lg-min {
-    
-//   }
-
-//   @include lg-md {
-    
-//   }
-
-//   @include md-sm {
-    
-//   }
-
-//   @include sm {
-    
-//   }

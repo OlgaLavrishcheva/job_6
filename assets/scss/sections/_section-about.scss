@@ -6,8 +6,7 @@
     padding-right: $gap;
     min-height: 700px;
     background-color: $color-gray-light;
-    grid-template-columns: 935 auto;
-    grid-column: 100px;
+    grid-template-columns: 935px auto;
 
     @include md {
         padding-top: 60px;
