@@ -3,8 +3,6 @@
     width: 100%;
     height: 252px;
     background-color: $color-primary;
-
-    // @extend %container;
 }
 
 .footer__container {
@@ -27,7 +25,6 @@
     grid-template-columns: repeat(5, 32.27px);
     grid-template-rows: 36px;
     grid-gap: 19.2px;
-    // left: 1px;
 
     & a {
         display: flex;
